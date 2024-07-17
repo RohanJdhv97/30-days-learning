@@ -45,7 +45,7 @@
                 <div class="hidden lg:flex lg:gap-x-12">
                     <x-nav-link href="/" :active="request()->is('/')" type="link">Home</x-nav-link>
                     <x-nav-link href="/about" :active="request()->is('about')" type="link">About</x-nav-link>
-                    <x-nav-link href="/contact" :active="request()->is('contact')" type="button">Contact</x-nav-link>
+                    <x-nav-link href="/jobs" :active="request()->is('jobs')" type="link">Contact</x-nav-link>
                 </div>
             </nav>
             <!-- Mobile menu, show/hide based on menu open state. -->
