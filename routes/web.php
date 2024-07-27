@@ -22,7 +22,11 @@ Route::get('/jobs/create', function () {
     return view('jobs.create');
 });
 
-Route::post('/jobs',function(){
+Route::post('/jobs', function () {
+    request()->validate([
+        'title' => 'required',
+        'salary' => 'required',
+    ]);
     Job::create([
         'title' => request('title'),
         'salary' => request('salary'),
