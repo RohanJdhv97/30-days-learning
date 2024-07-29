@@ -39,7 +39,15 @@
             </div>
             <div class="flex justify-between mt-10">
                 {{ $headingSlot }}
-                <x-button href="/jobs/create">Create Jobs</x-button>
+                <div class="flex gap-x-6">
+                    @auth
+                        <x-button href="/jobs/create">Create Jobs</x-button>
+                    @endauth
+                    @guest    
+                        <x-button href="/register">Register</x-button>
+                        <x-button href="/login">Login</x-button>
+                    @endguest
+                </div>
             </div>
             <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                 {{ $slot }}
