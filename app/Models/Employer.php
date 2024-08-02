@@ -10,7 +10,7 @@ class Employer extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'user_id'];
 
     public $timestamps = true;
 
