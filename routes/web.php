@@ -35,3 +35,7 @@ Route::get('/job/{job}/edit', function (Job $job){
     Gate::authorize('edit-job', $job);
     return view('jobs.edit', ['job' => $job]);
 });
+
+Route::get('/print', function(){
+    return view('print');
+});
